@@ -1,0 +1,49 @@
+<div class="order-confirmation-page">
+  <header>
+    Order Confirmation...
+  </header>
+  <div class="row">
+    <!-- Delivery Address Section -->
+    <div class="col-lg-6 delivery-address">
+      <div class="header">
+        Delivery Address
+      </div>
+      <div class="content">
+        <textarea [(ngModel)]="addressDetail.addressLine1" placeholder="Address" rows="2" cols="50"></textarea>
+       
+        <mat-select placeholder="Area" [(ngModel)]="addressDetail.area">
+          <mat-option></mat-option>
+          <mat-option *ngFor="let area of areaList" [value]="area" >{{area}}</mat-option>
+        </mat-select>
+        <input type="text" [(ngModel)]="addressDetail.city" placeholder="City" [disabled]="true"/>
+        <input type="text" [(ngModel)]="addressDetail.state" placeholder="State" [disabled]="true"/>
+        <input type="number" [(ngModel)]="addressDetail.pincode" placeholder="Pincode"/>
+      </div>
+    </div>
+      
+    <!-- Payment Methods Information -->
+    <div class="col-lg-6 payment-methods">
+      <div class="header">
+        Payment Methods
+      </div>
+      <div class="content">
+        You can do the payment once the Vegetables are 
+        delivered and the actual bill is generated. 
+        You can pay us by <span>Cash on Delivery</span> or you can <span>Paytm</span> us the money.
+      </div>
+    </div>
+
+    <!-- Confirm Order Instruction -->
+    <div class="col-lg-12 note-section">
+        Please Note, once you have confirmed the order, 
+        you have to <b>call 9535-9635-92 to cancel your order</b>.
+    </div>
+    
+    <!-- Confirm Order button -->
+    <div class="col-lg-12 confirm-order-button-container">
+      <button (click)="placeOrder()">Confirm Order</button>
+    </div>
+  </div>
+
+
+</div>

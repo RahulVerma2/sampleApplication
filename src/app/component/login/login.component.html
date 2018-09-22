@@ -1,0 +1,33 @@
+<div class="login-page">
+
+    <div class="header">
+        Sign in yourself
+    </div>
+
+    <div>
+            <input type="text" [(ngModel)]="username" placeholder="email"/>
+    </div>
+    <div>
+            <input type="password" [(ngModel)]="password"  placeholder="password"/>
+    </div>
+    <div class="error_message">
+        {{errorMsg}}
+    </div>
+    <div>
+            <button type="submit" (click)="signIn()">Sign In</button>
+    </div>
+        
+        
+        
+    <div class="login-page-link">
+        <span [routerLink]="['/trackOrder']">Forgot Password</span>
+    </div>
+
+    <div class="login-page-link">
+        <span [routerLink]="['/register']">Not a member? Register yourself</span>
+    </div>
+
+</div>
+
+
+

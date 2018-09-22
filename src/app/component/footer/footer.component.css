@@ -1,0 +1,27 @@
+.footer-section-container{
+    height: 100px;
+    background: #515151;
+    margin-top: 40px;
+    color: white;
+}
+
+.footer-section{
+    width: 90%;
+    margin: auto;
+    font-size: 18px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.footer-section div{
+    padding-top:10px;
+}
+
+.footer-section .col-lg-3 span{
+    cursor: pointer;
+    color: white;
+}
+
+.footer-section .col-lg-3 span:hover{
+    text-decoration: underline;
+}

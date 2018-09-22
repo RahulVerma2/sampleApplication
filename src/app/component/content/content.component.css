@@ -1,0 +1,160 @@
+.menu-section{
+    border-left: 1px solid #00000033;
+}
+
+.sorting-section{
+    margin-top:20px;
+}
+.img-container{
+    width: 100%;
+    height: 100px;
+    padding-left: 30px;
+}
+
+.menu-section .information{
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #0b6db8;
+}
+
+.search-box-container input{
+    height: 32px;
+    border: 1px solid #d3d3d3;
+    border-radius: 2px;
+    padding-left: 15px;
+}
+
+.vegetable-detail div{
+    margin-bottom: 5px;
+}
+
+
+.menu-section .name-section label{
+    display:block;
+    text-align: center;
+    font-size: 22px;
+    color: #f3bd1e;
+}
+
+
+.rate-section label, .cost-section label, .qty-section label{
+   color: #b27a66;
+}
+
+.rate-section span, .cost-section span{
+    float:right;
+    font-weight: bold;
+}
+
+.qty-section input{
+    width: 70px;
+    text-align: center;
+    font-weight: bold;
+    float: right;
+    background-color: #f6f6f6;
+    border: 1px solid #e5e1e1;
+}
+
+mat-card{
+    background: #fff;
+    margin-bottom:30px;
+    box-shadow: 0 1px 1px -2px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 1px 1px 0 rgba(0,0,0,.12) !important;
+    border: 1px solid #00000033;
+}
+
+mat-card-actions{
+    text-align: center;
+    margin-bottom: -6px !important;
+}
+
+mat-card-content{
+    margin-bottom: 0px;
+}
+
+.add-to-cart-button{
+    background: #85c919;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    box-shadow: 2px 2px 8px grey;
+    padding: 10px;
+}
+
+.add-to-cart-button:hover{
+    box-shadow: none;
+}
+
+.your-cart-items .cart-mini-list{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px; 
+}
+.your-cart-items .cart-mini-list ul{
+    padding-left: 15px;
+}
+.your-cart-items .cart-mini-list ul li{
+    margin-bottom: 10px;
+}
+.your-cart-items .cart-mini-list span{
+    color: red;
+    text-decoration: none;
+    padding-top: 1px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px grey;
+    font-size: 13px;
+}
+
+.your-cart-items .cart-mini-list span:hover{
+    text-shadow: none;
+    font-size: 12px;
+}
+
+.your-cart-items>label{
+    width:100%;
+    font-size: 13px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid
+}
+.your-cart-items span{
+    font-size: 12px;
+    color:green;
+    cursor: pointer;
+    text-decoration: underline;
+    float: right;
+    padding-top:1px;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    .your-cart-items{
+        display: none;
+    }
+    .search-box-container input{
+        width:100%;
+    }
+    .menu-section .information{
+        font-size: 13px;
+    }   
+    .menu-section .col-sm-6{
+        width:50%
+    }
+    .menu-section .img-container{
+        padding-left: 0px;
+    }
+    .menu-section mat-card{
+        box-shadow: none !important;
+    }
+    .menu-section .mat-card-content{
+        font-size: 13px;
+    }
+
+    .menu-section .vegetable-detail label{
+        margin-bottom: 0px;
+    }
+    .menu-section .name-section label{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .menu-section .qty-section input{
+        width: 50px;
+    }
+}

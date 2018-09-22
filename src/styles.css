@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body{
+    font-size:13px;
+    font-family : "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #e5edd94d;
+    color: #094674;
+}
+
+.border-right{
+    border-right: 1px solid #eeeeee;
+}
+
+
+.sprite { background: url('/assets/images/vegetableSprite.png') no-repeat; height: 229px;  } 
+.sprite.Beet { background-position: 0 0; height: 100px; } 
+.sprite.Bhindi { background-position: 0 -110px; height: 72px; } 
+.sprite.Brinjal { background-position: 0 -192px; height: 69px; } 
+.sprite.Brinjal_Long { background-position: 0 -271px; height: 91px; } 
+.sprite.Cabbage { background-position: 0 -372px; height: 84px; } 
+.sprite.Capsicum { background-position: 0 -466px; height: 76px; } 
+.sprite.Carrot { background-position: 0 -552px; height:83px;} 
+.sprite.Cauliflower { background-position: 0 -629px; height: 100px; } 
+.sprite.Cluster_Bean { background-position: 0 -739px; height: 79px; } 
+.sprite.Cucumber { background-position: 0 -828px; height: 103px; } 
+.sprite.Curry_Leaves { background-position: 0 -941px; height: 79px; } 
+.sprite.Dhaniya_Patta { background-position: 0 -1030px; height: 69px; } 
+.sprite.Drumstick { background-position: 0 -1109px; height: 74px; } 
+.sprite.Garlic { background-position: 0 -1193px; height: 69px; } 
+.sprite.Ginger { background-position: 0 -1272px; height: 76px; } 
+.sprite.Gongura { background-position: 0 -1358px; height: 66px; } 
+.sprite.Karela { background-position: 0 -1434px; height:75px;} 
+.sprite.Kundru { background-position: 0 -1511px; height: 92px; } 
+.sprite.Lauki { background-position: 0 -1613px; height: 71px; } 
+.sprite.Lemon { background-position: 0 -1694px; height: 94px; } 
+.sprite.Methi { background-position: 0 -1798px; height: 73px; } 
+.sprite.Mirchi { background-position: 0 -1881px; height: 123px; } 
+.sprite.Mulli { background-position: 0 -2014px; height: 65px; } 
+.sprite.Onion { background-position: 0 -2089px; height: 90px; } 
+.sprite.Potato { background-position: 0 -2189px; height: 71px; } 
+.sprite.Pudina { background-position: 0 -2270px; height: 76px; } 
+.sprite.Pumpkin { background-position: 0 -2356px; height: 57px; } 
+.sprite.RidgeGourd { background-position: 0 -2423px; height:88px;} 
+.sprite.Snake_Gourd { background-position: 0 -2500px; height: 79px; } 
+.sprite.Spinach { background-position: 0 -2589px; height: 136px; margin-top: -24px;} 
+.sprite.Tomato { background-position: 0 -2735px; height: 88px; } 
+
+.mat-menu-content {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    background-color: #a7d75c;
+}
+.mat-menu-item {
+   border:0px !important;
+    color: #ffffff;
+    font-weight: bold;
+    border-bottom: 1px solid #ffffff !important;
+}
+.mat-menu-item:nth-last-child(){
+    border:0px;
+}
+
+.col-sm-0, .col-xs-0, .col-lg-0, .col-md-0{
+    width: 0%;
+}
+.col-sm-2, .col-xs-2, .col-lg-2, .col-md-2{
+    width: 16.66%;
+}
+
+.col-sm-3, .col-xs-3, .col-lg-3, .col-md-3{
+    width: 25%;
+}
+
+.col-sm-4, .col-xs-4, .col-lg-4, .col-md-4{
+    width: 33.33%;
+}
+
+.col-sm-5, .col-xs-5, .col-lg-5, .col-md-5{
+    width: 41.67%;
+}
+
+.col-sm-6, .col-xs-6, .col-lg-6, .col-md-6{
+    width: 50%;
+}
+
+.col-sm-9, .col-xs-9, .col-lg-9, .col-md-9{
+    width: 75%;
+}
+
+.col-sm-12, .col-xs-12, .col-lg-12, .col-md-12{
+    width: 100%;
+}

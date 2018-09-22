@@ -1,0 +1,88 @@
+.register-page{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    border: 1px solid #eeeeee;
+    box-shadow: 1px 3px 11px grey;
+}
+
+.register-page .header{
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    
+}
+
+.register-page .invalid-feedback{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.register-page .form-group{
+    margin-bottom: 30px
+}
+
+.register-page input{
+    height: 45px;
+    width: 311px;
+    padding: 13px;
+    box-shadow: 0px 0px 0px #a7d75c inset;
+    font-size: 18px;
+    background-color: #e5edd9;
+    border: 1px solid #e5e1e1;
+}
+
+.register-page .error_message{
+    color: red;
+    font-weight: bold;
+}
+
+.register-page .success_message{
+    color: green;
+    font-weight: bold;
+}
+
+.register-page button{
+    font-size: 17px;
+    text-align: center;
+    box-shadow: 2px 6px 19px #5a6365;
+    margin: auto;
+    margin-top: 18px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #85c919;
+    padding: 8px;
+    width: 200px;
+    border: none;
+    margin-bottom: 25px;
+}
+
+.register-page .login-page-link span{
+    margin-bottom: 30px;
+    display:inline-block;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.register-page .login-page-link span:hover{
+    text-decoration: underline;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    .register-page{
+        width: 98%;
+        box-shadow: none;
+    }
+
+    .register-page form{
+        width: 85%;
+        margin: auto;
+    }
+
+    .register-page input{
+        width: 100%;
+    }
+}

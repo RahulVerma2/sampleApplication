@@ -1,0 +1,33 @@
+.track-order{
+    width: 90%;
+    margin: auto;
+    box-shadow: 1px 1px 15px grey;
+    min-height: 500px;
+    background-color: white;
+    font-size: 18px;
+}
+
+.track-order .header{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #0b6db8;
+}
+
+.track-order .content{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color:#094674
+}
+
+.track-order .content>div{
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.track-order .content>div:nth-child(odd){
+    background-color:#eeeeee;
+}

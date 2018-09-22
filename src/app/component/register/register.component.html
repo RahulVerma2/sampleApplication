@@ -1,0 +1,114 @@
+<div class="register-page">
+  <div [hidden]="!showRegister">
+    <div class="header">
+      Register yourself
+    </div>
+    <form novalidate [formGroup]="registerForm">
+      <div class="row" style="margin-left:0px">
+        <div class="col-lg-6 col-sm-12">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="name" formControlName="name" name="name" [ngClass]="{
+                    'is-valid':  name.valid,
+                    'is-invalid': name.invalid && (name.dirty || name.touched)
+                  }" />
+            <div class="invalid-feedback" *ngIf="name.errors && (name.dirty || name.touched)">
+              <p *ngIf="name.errors.required">Please enter your name</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" formControlName="phone" placeholder="phone number"name="phone " [ngClass]="{
+                  'is-valid':  phone.valid,
+                  'is-invalid': phone.invalid && (phone.dirty || phone.touched)
+                }" />
+            <div class="invalid-feedback" *ngIf="phone.errors && (phone.dirty || phone.touched)">
+              <p *ngIf="phone.errors.required">Please enter the phone number</p>
+              <p *ngIf="phone.errors.notPositiveNumber">Please enter a valid phone number</p>
+              <p *ngIf="phone.errors.nonZeroError">Phone Number should be non zero</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+              <input type="email" formControlName="email" name="email" placeholder="email" class="form-control" [ngClass]="{
+                'is-valid':  email.valid,
+                'is-invalid': email.invalid && (email.dirty || email.touched)
+              }" />
+              <div class="invalid-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
+                <p *ngIf="email.errors.required">Please enter email</p>
+                <p *ngIf="email.errors.pattern">Email must have '@' character</p>
+                <p *ngIf="email.errors.emailDomain">Email must have '.' character</p> 
+                <p *ngIf="email.errors.noExtension">Please enter valid email</p> 
+                
+              </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-6 col-sm-12">
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="password" formControlName="password" name="password" [ngClass]="{
+                        'is-valid':  password.valid,
+                        'is-invalid': password.invalid && (password.dirty || password.touched)
+                      }" />
+                <div class="invalid-feedback" *ngIf="password.errors && (password.dirty || password.touched)">
+                  <p *ngIf="password.errors.required">Please enter your password</p>
+                </div>
+              </div>
+              <div class="form-group">
+                  <input type="password" class="form-control" placeholder="confirmPassword" formControlName="confirmPassword" name="confirmPassword" [ngClass]="{
+                          'is-valid':  confirmPassword.valid,
+                          'is-invalid': confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)
+                        }" />
+                  <div class="invalid-feedback" *ngIf="confirmPassword.errors && (confirmPassword.dirty || confirmPassword.touched)">
+                    <p *ngIf="confirmPassword.errors.required">Please Confirm your password</p>
+                  </div>
+                </div>
+        </div>
+      </div>
+    
+    <div class="success_message">
+      {{successMsg}}
+    </div>
+    <div class="error_message">
+      {{errorMsg}}
+    </div>
+    <div>
+      <button type="submit" (click)="generateOTP()" [disabled]="registerForm.invalid">Sign Up</button>
+    </div>
+
+  </form>
+
+    <div class="login-page-link">
+      <span [routerLink]="['/login']">Already a member? Login</span>
+    </div>
+  </div>
+  <div [hidden]="!showOTP">
+    <div class="header">
+      Enter OTP
+    </div>
+    <div>
+      <input type="text" [(ngModel)]="otp" placeholder="" required/>
+    </div>
+    <div class="success_message">
+      {{successMsg}}
+    </div>
+    <div class="error_message">
+      {{errorMsg}}
+    </div>
+    <div>
+      <button type="submit" (click)="confirmOTP()">Confirm OTP</button>
+    </div>
+  </div>
+
+  <div [hidden]="!showSuccess">
+
+    <div class="success_message">
+      {{successMsg}}
+    </div>
+    <div class="error_message">
+      {{errorMsg}}
+    </div>
+
+  </div>
+
+</div>

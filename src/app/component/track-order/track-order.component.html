@@ -1,0 +1,50 @@
+<div class="track-order">
+  <div class="header">
+    <div class="row">
+
+      <div class="col-lg-3">
+        Order Id
+      </div>
+      <div class="col-lg-3">
+        Order Date
+      </div>
+
+      <div class="col-lg-3">
+        Delivery Address
+      </div>
+      <div class="col-lg-3">
+        Delivery Status
+      </div>
+
+    </div>
+  </div>
+
+  <div class="content">
+    <div *ngFor="let item of orderList | orderBy:'orderDate':'desc'" class="order-item-list">
+      <div class="row">
+        <div class="col-lg-3">
+          {{item.orderId}}
+        </div>
+        <div class="col-lg-3">
+          {{item.orderDate}}
+        </div>
+        <div class="col-lg-3">
+          <div>
+            {{item.address[0].addressLine1}},
+          </div>
+          <div>
+            <span>{{item.address[0].city}}</span>, <span>{{item.address[0].pincode}}</span>,
+          </div>
+          <div>
+            {{item.address[0].state}}
+          </div>
+        </div>
+        <div class="col-lg-3">
+          {{item.currentStatus}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

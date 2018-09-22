@@ -1,0 +1,59 @@
+<div class="header">
+
+  <!-- Logo -->
+  <div class="row desktop-view-header" style="margin-right:0px;">
+    <div class="col-lg-2 col-sm-3">
+      <div class="logo" [routerLink]="['content']" style="cursor:pointer;">
+
+      </div>
+
+    </div>
+
+    <!-- Title -->
+    <div class="col-lg-8 col-sm-6">
+      <div>
+        <header>
+          <label [routerLink]="['content']" style="cursor:pointer;">
+                <span>Farmer's</span>
+                <span>Own</span>
+              </label>
+        </header>
+      </div>
+    </div>
+
+    <!-- Sign In Option -->
+    <div class="col-lg-2 col-sm-3">
+      <div class="sign-in-button" [routerLink]="['login']" [hidden]="isUserSignedIn">
+        Sign In
+      </div>
+
+      <div [hidden]="!isUserSignedIn" class="user-account-options" [matMenuTriggerFor]="menu">
+        <span class="glyphicon glyphicon-user user-icon"></span>
+        <span class="user-display-name">Hi {{displayName}} </span>
+      </div>
+     
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>My Accounts</button>
+        <button mat-menu-item (click)="signOut()"> <span class="glyphicon glyphicon-exit" ></span>Sign Out</button>
+      </mat-menu>
+    </div>
+
+  </div>
+
+  <!-- Navigation Menu -->
+  <div class="navigation-menu-bar">
+    <div>
+      <span [routerLink]="['content']">Vegetable List</span>
+    </div>
+
+    <div>
+      <span [routerLink]="['trackOrder']">Track Orders</span>
+    </div>
+
+    
+
+    <div>
+      <span [routerLink]="['cart']">Your Cart <span class="glyphicon glyphicon-shopping-cart"></span></span>
+    </div>
+  </div>
+</div>
