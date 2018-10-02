@@ -11,6 +11,7 @@ export class ContentComponent implements OnInit {
   
   vegetableList = [];
   cartList =[];
+  searchKeyword : string;
 
   constructor(private contentServiceService: ContentServiceService) { }
 
